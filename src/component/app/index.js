@@ -1,48 +1,53 @@
 'use strict';
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
+import SearchBar from '../search-bar';
 
-const API_URL = `http://api.giphy.com/v1/gifs/search?q=cats&api_key=${__API_KEY__}&limit=5`;
-
+const API_URL = `http://api.giphy.com/v1/gifs`;
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      results: null,
+      searchError: null,
+    };
+    this.gifSearch = this.gifSearch.bind(this);
   }
 
-  // gifSearch(term) {
-  //   axios.get(`${API_URL}`)
-  //     .then(res => {
-  //       console.log('request success', res);
-  //
-  //     })
-  //     .catch(err => {
-  //       console.error(err);
-  //     });
-  // }
-  componentDidMount() {
-    axios.get(`${API_URL}`)
+  componentDidUpdate() {
+    console.log(':::::STATE::::', this.state);
+  }
+
+  gifSearch(term) {
+    axios.get(`${API_URL}/search?q=${term}&api_key=${__API_KEY__}&limit=5`)
       .then(res => {
         console.log('request success', res.data.data);
+        this.setState = {
+          results: res.data.data,
+          searchError: null,
+        };
       })
       .catch(err => {
         console.error(err);
+        this.setState({
+          results: null,
+          searchError: 'Unable to find a matching gif',
+        });
       });
   }
-
-  // <SearchBar handleSearch={this.gifSearch}/>
 
   render() {
     return (
       <main>
         <h1>gif machine</h1>
-
+        <SearchBar handleSearch={this.gifSearch} />
       </main>
     );
   }
 }
+
+
 
 export default App;
