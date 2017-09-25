@@ -33,25 +33,22 @@ class SearchBar extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          <input
-            type='number'
-            name='amount'
-            min='1'
-            max='10'
-            onChange={this.handleChange}
-            value={this.state.amount}
-          />
-        </label>
+        <input
+          type='number'
+          name='amount'
+          min='1'
+          max='10'
+          onChange={this.handleChange}
+          value={this.state.amount}
+        />
 
-        <label>
-          <input
-            name='term'
-            type='text'
-            onChange={this.handleChange}
-            value={this.state.term}
-          />
-        </label>
+        <input
+          name='term'
+          type='text'
+          placeholder='Type search term'
+          onChange={this.handleChange}
+          value={this.state.term}
+        />
         <button type='submit' value='Submit'>Find</button>
       </form>
     );
