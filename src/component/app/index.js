@@ -23,10 +23,10 @@ class App extends React.Component {
     console.log(':::::STATE::::', this.state);
   }
 
-  gifSearch(term) {
+  gifSearch(amount, term) {
     let random =  Math.floor(Math.random() * (500 - 0) + 0);
 
-    axios.get(`${API_URL}/search?q=${term}&api_key=${__API_KEY__}&offset=${random}&limit=5`)
+    axios.get(`${API_URL}/search?q=${term}&api_key=${__API_KEY__}&offset=${random}&limit=${amount}`)
       .then(res => {
         console.log('request success', res.data.data);
         if(res.data.data.length === 0) {
@@ -54,6 +54,7 @@ class App extends React.Component {
         {renderIf(this.state.searchError,
           <p>{this.state.searchError}</p>
         )}
+
       </main>
     );
   }

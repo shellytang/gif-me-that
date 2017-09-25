@@ -8,7 +8,6 @@ class SearchResults extends React.Component {
 
   }
 
-
   render() {
     let gifs = this.props.gifList || [];
 
