@@ -3,7 +3,7 @@
 import React from 'react';
 import axios from 'axios';
 import SearchBar from '../search-bar';
-import SearchResults from '../search-results';
+import GifList from '../gif-list';
 
 const API_URL = `http://api.giphy.com/v1/gifs`;
 
@@ -46,10 +46,10 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <h1>gif machine</h1>
+        <h1>Gif Search</h1>
         <SearchBar handleSearch={this.gifSearch} />
         {renderIf(this.state.results,
-          <SearchResults gifList={this.state.results}/>)
+          <GifList gifList={this.state.results}/>)
         }
         {renderIf(this.state.searchError,
           <p>{this.state.searchError}</p>

@@ -24,12 +24,15 @@ class SearchBar extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.handleSearch(this.state.amount, this.state.term);
+    this.setState({
+      term: '',
+      amount: 1,
+    });
   }
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-
         <label>
           <input
             type='number'
@@ -42,7 +45,6 @@ class SearchBar extends React.Component {
         </label>
 
         <label>
-          Search
           <input
             name='term'
             type='text'
@@ -50,7 +52,7 @@ class SearchBar extends React.Component {
             value={this.state.term}
           />
         </label>
-        <button type='submit' value='Submit'>generate</button>
+        <button type='submit' value='Submit'>Find</button>
       </form>
     );
   }
