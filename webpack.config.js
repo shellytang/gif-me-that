@@ -1,8 +1,17 @@
 'use strict';
 
-require('dotenv').config({path: `${__dirname}/.env`});
+require('dotenv').config();
+const {DefinePlugin} = require('webpack');
 const ExtractPlugin = require('extract-text-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
+
+let plugins = [
+  new HtmlPlugin({ template: `${__dirname}/src/index.html` }),
+  new ExtractPlugin('blundle-[hash].css'),
+  new DefinePlugin({
+    __API_KEY__: JSON.stringify(process.env.API_KEY),
+  }),
+];
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -15,10 +24,7 @@ module.exports = {
     path: `${__dirname}/build`,
     publicPath: '/',
   },
-  plugins: [
-    new HtmlPlugin({ template: `${__dirname}/src/index.html` }),
-    new ExtractPlugin('blundle-[hash].css'),
-  ],
+  plugins,
   module: {
     rules: [
       {
