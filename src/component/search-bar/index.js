@@ -27,7 +27,6 @@ class SearchBar extends React.Component {
     this.props.handleSearch(this.state.amount, this.state.term);
     this.setState({
       term: '',
-      amount: 0,
     });
   }
 
@@ -45,19 +44,24 @@ class SearchBar extends React.Component {
 
     return (
       <form onSubmit={this.handleSubmit} className='form'>
+        <div className='gifNumber'>
+          <label>How many GIFs? </label>
+          <select
+            name='amount' value={this.state.amount}
+            onChange={this.handleChange}>
+            {optionAmt}
+          </select>
+        </div>
 
-        <select name='amount' value={this.state.amount} onChange={this.handleChange}>
-          {optionAmt}
-        </select>
-
-        <input
-          name='term'
-          type='text'
-          placeholder='Type search term'
-          onChange={this.handleChange}
-          value={this.state.term}
-        />
-        <button type='submit' value='Submit'>Find</button>
+        <div className='gifSearch'>
+          <input
+            name='term'
+            type='text'
+            onChange={this.handleChange}
+            value={this.state.term}
+          />
+          <button type='submit' value='Submit'>Search</button>
+        </div>
       </form>
     );
   }
