@@ -22,7 +22,7 @@ class GifList extends React.Component {
     });
 
     return (
-      <div className='gif-list'>{gifs}</div>
+      <div className='gifList'>{gifs}</div>
     );
   }
 

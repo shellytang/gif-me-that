@@ -4,10 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -17,6 +14,7 @@ main {
 
 h1 {
   text-align: center;
+  margin-top: 5%;
   padding: 1.5em;
 }
 
@@ -31,9 +29,9 @@ p {
 }
 
 select {
-  width: 10%;
   font-size: 1.2em;
   margin-left: 1%;
+  border:1px solid #E5E5E5;
 }
 
 input[type=text] {
@@ -56,7 +54,7 @@ input[type=text] {
 button {
   background-color: #2980b9;
   color: white;
-  width: 15%;
+  width: 20%;
   font-size: 1.1em;
   border-radius: .4em;
   margin-left: 1%;
@@ -69,14 +67,13 @@ button {
   }
 }
 
-.gif-list {
-  margin-top: 20%;
+.gifList {
   width: 80%;
-  margin: 5% 10% 0% 10%;
+  margin: 10% 10% 0% 10%;
 }
 
-.gif-list-item {
+.gifListItem {
     display: inline-block;
     width: 50%;
-    margin: 5% 25% 0% 25%;
+    margin: 2.5% 25% 2.5% 25%;
 }
