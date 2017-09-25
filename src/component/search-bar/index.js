@@ -7,11 +7,12 @@ class SearchBar extends React.Component {
     super(props);
     this.state = {
       term: '',
-      amount: 1,
+      amount: 0,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
 
   handleChange(e) {
     const value = e.target.value;
@@ -26,21 +27,28 @@ class SearchBar extends React.Component {
     this.props.handleSearch(this.state.amount, this.state.term);
     this.setState({
       term: '',
-      amount: 1,
+      amount: 0,
     });
   }
 
   render() {
+    const numArr = [];
+    for(let i = 1; i <=10; i++) {
+      numArr.push(i);
+    }
+
+    const optionAmt = numArr.map((num,i) => {
+      return (
+        <option value={num} key={i}>{num}</option>
+      );
+    });
+
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          type='number'
-          name='amount'
-          min='1'
-          max='10'
-          onChange={this.handleChange}
-          value={this.state.amount}
-        />
+      <form onSubmit={this.handleSubmit} className='form'>
+
+        <select name='amount' value={this.state.amount} onChange={this.handleChange}>
+          {optionAmt}
+        </select>
 
         <input
           name='term'
