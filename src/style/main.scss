@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  width: 80%;
+  margin: 0 10%;
+}
+
+h1 {
+  text-align: center;
+  padding: 1.5em;
+}
+
+p {
+  font-size: 1.2em;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.form {
+  text-align: center;
+}
+
+select {
+  width: 10%;
+  font-size: 1.2em;
+  margin-left: 1%;
+}
+
+input[type=text] {
+  width: 30%;
+  font-size: 1.2em;
+  border-radius: .4em;
+  padding: .85%;
+  margin-left: 1%;
+}
+
+.gifNumber {
+  margin-top: 5%;
+  font-size: 1.2em;
+}
+
+.gifSearch {
+  margin-top: 3%;
+}
+
+button {
+  background-color: #2980b9;
+  color: white;
+  width: 15%;
+  font-size: 1.1em;
+  border-radius: .4em;
+  margin-left: 1%;
+  padding: 1%;
+  border: none;
+  cursor: pointer;
+  transition: 350ms all;
+  &:hover {
+  background: #236d9d;
+  }
+}
+
+.gif-list {
+  margin-top: 20%;
+  width: 80%;
+  margin: 5% 10% 0% 10%;
+}
+
+.gif-list-item {
+    display: inline-block;
+    width: 50%;
+    margin: 5% 25% 0% 25%;
+}

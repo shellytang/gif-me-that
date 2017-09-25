@@ -11,7 +11,7 @@ class GifList extends React.Component {
 
   render() {
     const gifList = this.props.gifList || [];
-    
+
     const gifs = gifList.map(gif => {
       return (
         <GifListItem
@@ -22,7 +22,7 @@ class GifList extends React.Component {
     });
 
     return (
-      <div>{gifs}</div>
+      <div className='gif-list'>{gifs}</div>
     );
   }
 

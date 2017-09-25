@@ -32,7 +32,7 @@ class App extends React.Component {
         if(res.data.data.length === 0) {
           this.setState({
             results: null,
-            searchError: 'Oops! Try another search term',
+            searchError: 'Oops! Try another search term!',
           });
         } else {
           this.setState({
@@ -46,7 +46,7 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <h1>Gif Finder</h1>
+        <h1>GIF ME THAT!</h1>
         <SearchBar handleSearch={this.gifSearch} />
         {renderIf(this.state.results,
           <GifList gifList={this.state.results}/>)

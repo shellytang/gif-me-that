@@ -7,11 +7,12 @@ class SearchBar extends React.Component {
     super(props);
     this.state = {
       term: '',
-      amount: 1,
+      amount: 0,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
 
   handleChange(e) {
     const value = e.target.value;
@@ -26,30 +27,41 @@ class SearchBar extends React.Component {
     this.props.handleSearch(this.state.amount, this.state.term);
     this.setState({
       term: '',
-      amount: 1,
     });
   }
 
   render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          type='number'
-          name='amount'
-          min='1'
-          max='10'
-          onChange={this.handleChange}
-          value={this.state.amount}
-        />
+    const numArr = [];
+    for(let i = 1; i <=10; i++) {
+      numArr.push(i);
+    }
 
-        <input
-          name='term'
-          type='text'
-          placeholder='Type search term'
-          onChange={this.handleChange}
-          value={this.state.term}
-        />
-        <button type='submit' value='Submit'>Find</button>
+    const optionAmt = numArr.map((num,i) => {
+      return (
+        <option value={num} key={i}>{num}</option>
+      );
+    });
+
+    return (
+      <form onSubmit={this.handleSubmit} className='form'>
+        <div className='gifNumber'>
+          <label>How many GIFs? </label>
+          <select
+            name='amount' value={this.state.amount}
+            onChange={this.handleChange}>
+            {optionAmt}
+          </select>
+        </div>
+
+        <div className='gifSearch'>
+          <input
+            name='term'
+            type='text'
+            onChange={this.handleChange}
+            value={this.state.term}
+          />
+          <button type='submit' value='Submit'>Search</button>
+        </div>
       </form>
     );
   }
