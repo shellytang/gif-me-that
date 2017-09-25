@@ -46,7 +46,7 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <h1>Gif Search</h1>
+        <h1>Gif Finder</h1>
         <SearchBar handleSearch={this.gifSearch} />
         {renderIf(this.state.results,
           <GifList gifList={this.state.results}/>)

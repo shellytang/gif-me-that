@@ -10,7 +10,7 @@ class GifListItem extends React.Component {
   render() {
     return (
       <div>
-        <img src={this.props.gif.images.fixed_height.url}/>
+        <a href={this.props.gif.url} target='_blank'><img src={this.props.gif.images.fixed_height.url} alt='gif'/></a>
       </div>
     );
   }
