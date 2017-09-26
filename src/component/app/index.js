@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   gifSearch(amount, term) {
-    let random =  Math.floor(Math.random() * (500 - 0) + 0);
+    let random =  Math.floor(Math.random() * (100 - 0) + 0);
 
     axios.get(`${API_URL}/search?q=${term}&api_key=${__API_KEY__}&offset=${random}&limit=${amount}`)
       .then(res => {
