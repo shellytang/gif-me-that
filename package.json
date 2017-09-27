@@ -45,12 +45,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shellytang/react-practice.git"
+    "url": "git+https://github.com/shellytang/gif-me-that"
   },
   "author": "shelly",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shellytang/react-practice/issues"
+    "url": "https://github.com/shellytang/gif-me-that/issues"
   },
-  "homepage": "https://github.com/shellytang/react-practice#readme"
+  "homepage": "https://github.com/shellytang/gif-me-that#readme"
 }
