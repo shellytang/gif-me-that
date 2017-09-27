@@ -43,7 +43,7 @@ class SearchBar extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} className='form'>
         <div className='gifNumber'>
-          <label>How many GIFs? </label>
+          <label><span>How many GIFs?</span></label>
           <select
             name='amount' value={this.state.amount}
             onChange={this.handleChange}>

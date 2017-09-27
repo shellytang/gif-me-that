@@ -7,25 +7,42 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-image: url(../img/background.jpg);
+  z-index: -1;
+}
+
 main {
   width: 80%;
   margin: 0 10%;
 }
 
+.title {
+  outline: 2px solid blue;
+}
+
 h1 {
+  margin-top: 10%;
   text-align: center;
-  margin-top: 5%;
-  padding: 1.5em;
+  z-index: 1;
+
+}
+
+span {
+  background-color: #53b6fc;
+  padding: .15em;
+  box-shadow: 8px 8px 5px #000;
 }
 
 p {
   font-size: 1.2em;
-  margin-top: 5%;
+  margin-top: 7%;
   text-align: center;
 }
 
 .form {
   text-align: center;
+  margin-top: 10%;
 }
 
 select {
@@ -35,9 +52,8 @@ select {
 }
 
 input[type=text] {
-  width: 30%;
+  width: 40%;
   font-size: 1.2em;
-  border-radius: .4em;
   padding: .85%;
   margin-left: 1%;
 }
@@ -48,7 +64,7 @@ input[type=text] {
 }
 
 .gifSearch {
-  margin-top: 3%;
+  margin-top: 7%;
 }
 
 button {
@@ -56,7 +72,7 @@ button {
   color: white;
   width: 20%;
   font-size: 1.1em;
-  border-radius: .4em;
+  box-shadow: 8px 8px 5px #000;
   margin-left: 1%;
   padding: 1%;
   border: none;
