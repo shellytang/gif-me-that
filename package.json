@@ -38,7 +38,7 @@
     "test": "jest",
     "lint": "eslint .",
     "build": "webpack",
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "node server.js",
     "postinstall": "webpack -p",
     "heroku-postbuild": "webpack",
     "watch": "webpack-dev-server --inline --hot"
