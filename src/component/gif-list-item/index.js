@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 
 class GifListItem extends React.Component {
