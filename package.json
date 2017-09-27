@@ -29,7 +29,7 @@
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
   },
-  "name": "gif me that",
+  "name": "gifmethat",
   "description": "simple web app that searches for gifs",
   "version": "1.0.0",
   "main": "server.js",
