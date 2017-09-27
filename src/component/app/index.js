@@ -3,7 +3,7 @@ import axios from 'axios';
 import SearchBar from '../search-bar';
 import GifList from '../gif-list';
 
-const API_URL = `http://api.giphy.com/v1/gifs`;
+const API_URL = 'https://api.giphy.com/v1/gifs';
 
 let renderIf = (test, component) => test ? component : undefined;
 
