@@ -6,7 +6,10 @@ const ExtractPlugin = require('extract-text-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 
 let plugins = [
-  new HtmlPlugin({ template: `${__dirname}/src/index.html` }),
+  new HtmlPlugin({
+    template: `${__dirname}/src/index.html`,
+    favicon: `${__dirname}/src/img/favicon.ico`,
+  }),
   new ExtractPlugin('blundle-[hash].css'),
   new DefinePlugin({
     __API_KEY__: JSON.stringify(process.env.API_KEY),
@@ -41,7 +44,7 @@ module.exports = {
         exclude: /\.icon.svg$/,
         use: [
           {
-            loader: 'url-loader', 
+            loader: 'url-loader',
             options: {
               limit: 60000,
               name: 'img/[name].[ext]',
