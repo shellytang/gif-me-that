@@ -17,9 +17,9 @@ class App extends React.Component {
     this.gifSearch = this.gifSearch.bind(this);
   }
 
-  componentDidUpdate() {
-    console.log(':::::STATE::::', this.state);
-  }
+  // componentDidUpdate() {
+  //   console.log(':::::STATE::::', this.state);
+  // }
 
   gifSearch(amount, term) {
     let random =  Math.floor(Math.random() * (100 - 0) + 0);

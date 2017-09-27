@@ -41,7 +41,7 @@ module.exports = {
         exclude: /\.icon.svg$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'url-loader', 
             options: {
               limit: 60000,
               name: 'img/[name].[ext]',
