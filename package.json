@@ -29,10 +29,10 @@
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
   },
-  "name": "react-practice",
-  "description": "",
+  "name": "gif me that",
+  "description": "simple web app that searches for gifs",
   "version": "1.0.0",
-  "main": "webpack.config.js",
+  "main": "server.js",
   "devDependencies": {},
   "scripts": {
     "test": "jest",
@@ -47,7 +47,7 @@
     "type": "git",
     "url": "git+https://github.com/shellytang/react-practice.git"
   },
-  "author": "",
+  "author": "shelly",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/shellytang/react-practice/issues"
