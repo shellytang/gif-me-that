@@ -36,6 +36,19 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractPlugin.extract(['css-loader','sass-loader']),
       },
+      {
+        test: /\.(jpg|jpeg|gif|png|tiff|svg)$/,
+        exclude: /\.icon.svg$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 60000,
+              name: 'img/[name].[ext]',
+            },
+          },
+        ],
+      },
     ],
   },
 };

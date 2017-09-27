@@ -26,7 +26,7 @@ class App extends React.Component {
 
     axios.get(`${API_URL}/search?q=${term}&api_key=${__API_KEY__}&offset=${random}&limit=${amount}`)
       .then(res => {
-        console.log('request success', res.data.data);
+        // console.log('request success', res.data.data);
         if(res.data.data.length === 0) {
           this.setState({
             results: null,
@@ -44,15 +44,14 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <h1>GIF ME THAT!</h1>
+        <h1><span>GIF ME THAT!</span></h1>
         <SearchBar handleSearch={this.gifSearch} />
         {renderIf(this.state.results,
           <GifList gifList={this.state.results}/>)
         }
         {renderIf(this.state.searchError,
-          <p>{this.state.searchError}</p>
+          <p><span>{this.state.searchError}</span></p>
         )}
-
       </main>
     );
   }
