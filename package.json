@@ -29,7 +29,7 @@
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
   },
-  "name": "gifmethat",
+  "name": "gif-me-that",
   "description": "simple web app that searches for gifs",
   "version": "1.0.0",
   "main": "server.js",
@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shellytang/gif-me-that"
+    "url": "git+https://github.com/shellytang/gif-me-that.git"
   },
   "author": "shelly",
   "license": "MIT",
