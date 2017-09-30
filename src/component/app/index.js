@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import SearchBar from '../search-bar';
 import GifList from '../gif-list';
+import octoCat from '../../img/octocat.png';
 
 const API_URL = 'https://api.giphy.com/v1/gifs';
 
@@ -44,6 +45,7 @@ class App extends React.Component {
   render() {
     return (
       <main>
+        <a href={'https://github.com/shellytang/gif-me-that'} target={'_blank'}><img src={octoCat} alt='github logo' className='githubLogo'/></a>
         <h1><span>GIF ME THAT!</span></h1>
         <SearchBar handleSearch={this.gifSearch} />
         {renderIf(this.state.results,
