@@ -77,8 +77,10 @@ button {
   border: none;
   cursor: pointer;
   transition: 350ms all;
-  &:hover {
-  background: #236d9d;
+  @media screen and (min-width: 768px) {
+    &:hover {
+      background: #236d9d;
+    }
   }
 }
 
@@ -108,8 +110,10 @@ button {
   right: 1.5%;
   top: 1%;
   box-shadow: 6px 6px 5px #000;
-  &:hover {
-  background: #a6d9fd;
-  }
 
+  @media screen and (min-width: 768px) {
+      &:hover {
+        background: #a6d9fd;
+      }
+    }
 }
