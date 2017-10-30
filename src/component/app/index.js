@@ -17,23 +17,18 @@ class App extends React.Component {
     };
     this.gifSearch = this.gifSearch.bind(this);
   }
-
-  // componentDidUpdate() {
-  //   console.log(':::::STATE::::', this.state);
-  // }
-
+  
   gifSearch(amount, term) {
     let random =  Math.floor(Math.random() * (100 - 0) + 0);
-
-    axios.get(`${API_URL}/search?q=${term}&api_key=${__API_KEY__}&offset=${random}&limit=${amount}`)
+    axios.get(`${API_URL}/search?q=${term}&api_key=${__API_KEY__}&offset=${random}&limit=${amount}&rating=g`)
       .then(res => {
-        // console.log('request success', res.data.data);
         if(res.data.data.length === 0) {
           this.setState({
             results: null,
             searchError: 'Oops! Try another search term!',
           });
         } else {
+          console.log('data', res.data.data);
           this.setState({
             results: res.data.data,
             searchError: null,
